@@ -2,7 +2,7 @@
 
 #SBATCH --job-name qscript
 #SBATCH --nodes=1              # Request one node
-#SBATCH --tasks-per-node=128   # Request 128 tasks per node
+#SBATCH --tasks-per-node=2     # Request two tasks per node
 #SBATCH --cpus-per-task=1      # Request one cpu per task
 #SBATCH --time=00:20:00
 
@@ -13,4 +13,5 @@
 module load epcc-job-env
 module load cray-python
 
-srun python mpi-driver.py
+# Run with two MPI tasks
+srun python ./exercise1.py

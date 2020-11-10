@@ -1,17 +1,18 @@
 #!/bin/bash --login
 
-#PBS -N qscript
-#PBS -l select=1
-#PBS -l walltime=00:20:00
-#PBS -A 
+#SBATCH --job-name qscript
+#SBATCH --nodes=1              # Request one node
+#SBATCH --tasks-per-node=128   # Request 128 tasks per node
+#SBATCH --cpus-per-task=1      # Request one cpu per task
+#SBATCH --time=00:20:00
 
-cd $PBS_O_WORKDIR
+#SBATCH --account=ta006
+#SBATCH --partition=standard
+#SBATCH --qos=standard
 
-# Load the relevant back-end modules
+module load epcc-job-env
+module load cray-python
 
-module load python-compute
-module load pc-numpy
+# Run on 128 tasks (a full ARCHER2 node)
 
-# Run on 24 tasks (-n 24) with 24 tasks per node (-N 24)
-
-aprun -n 24 -N 24 python ./hello.py
+srun python ./hello.py

@@ -2,8 +2,8 @@
 # ctypes coupling for mpi4py to C
 #
 # Requires, on the front end
-#   module swap PrgEnv-cray PrgEnv-gnu
-#   module load python-compute
+#   module restore PrgEnv-gnu
+#   module load cray-python
 #   make
 #
 # IMPORTANT

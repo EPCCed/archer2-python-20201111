@@ -1,12 +1,16 @@
 #!/bin/bash --login
 
-#PBS -N qscript
-#PBS -l select=1
-#PBS -l walltime=00:20:00
-#PBS -A 
+#SBATCH --job-name qscript
+#SBATCH --nodes=1              # Request one node
+#SBATCH --tasks-per-node=4     # Request four tasks per node
+#SBATCH --cpus-per-task=1      # Request one cpu per task
+#SBATCH --time=00:20:00
 
-cd $PBS_O_WORKDIR
+#SBATCH --account=ta006
+#SBATCH --partition=standard
+#SBATCH --qos=standard
 
-module load python-compute
+module load epcc-job-env
+module load cray-python
 
-aprun -n 4 python mpi-driver.py
+srun python mpi-driver.py
