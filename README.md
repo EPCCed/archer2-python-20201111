@@ -1,12 +1,9 @@
 
-## ARCHER python course
+## ARCHER2 python course
 
-Welcome to the ARCHER python course. ARCHER https://www.archer.ac.uk/ is
+Welcome to the ARCHER2 python course. ARCHER2 https://www.archer2.ac.uk/ is
 the UK national supercomputing service.
 
-#### Local details for Belfast December 2019
-
-Timetable & location are in ./2019-belfast.md
 
 #### What you will need
 
@@ -15,7 +12,7 @@ Timetable & location are in ./2019-belfast.md
   from https://www.continuum.io/
 - The course material should be downloaded from this repository
 ```
-$ git clone http://github.com/EPCCed/archer-python.git
+$ git clone http://github.com/EPCCed/archer2-python-20201111.git
 ```
 
 For this last stage you will require a git client (Linux/MacOS should have
@@ -36,9 +33,9 @@ and use the file navigation bar on the left to move to the lectures.
 
 Thematic example in examples/cfd
 
-Archer examples in examples/mpi4py-archer
+Archer2 examples in examples/mpi4py-archer2
 
 
-#### ARCHER
+#### ARCHER2
 
-Details of access to ARCHER will be provided on the day.
+Details of access to ARCHER2 will be provided on the day.
