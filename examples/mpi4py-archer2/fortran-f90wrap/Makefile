@@ -3,18 +3,16 @@
 #
 #  This requires f90wrap be installed. Briefly,
 #
-#  module swap PrgEnv-cray PrgEnv-gnu
-#  module swap gcc gcc/4.9.3
-#  module load python-compute
-#  module load pc-numpy
+#  module restore PrgEnv-gnu
+#  module load cray-python
 #
 #  and, e.g., from the current directory, to build f90wrap
 #
 #  git clone https://github.com/jameskermode/f90wrap.git
 #  cd f90wrap
-#  export PYTHONPATH=$PYTHONPATH:`pwd`/lib/python2.7/site-packages
-#  export PATH=$PATH:`pwd`/bin
 #  python setup.py install --prefix=`pwd`
+#  export PYTHONPATH=$PYTHONPATH:`pwd`/lib/python3.8/site-packages
+#  export PATH=$PATH:`pwd`/bin
 #
 #  Return to the current directory and
 #  make
@@ -28,7 +26,6 @@
 #  it suggests a mismatch. Use ldd to check exactly which version
 #  is involved in mpi4py .so file and the _fortran.so file
 #
-#  At the time of writing it's gcc/4.9.3 (see module stuff above).
 
 
 TEST=test1
