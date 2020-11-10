@@ -2,7 +2,7 @@
 ## ARCHER2 python course
 
 Welcome to the ARCHER2 python course. ARCHER2 https://www.archer2.ac.uk/ is
-the UK national supercomputing service.
+due to replace ARCHER as the UK national supercomputing service.
 
 
 #### What you will need
