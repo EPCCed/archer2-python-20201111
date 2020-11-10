@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=1      # Request one cpu per task
 #SBATCH --time=00:20:00
 
-#SBATCH --account=z19
+#SBATCH --account=ta006
 #SBATCH --partition=standard
 #SBATCH --qos=standard
 
