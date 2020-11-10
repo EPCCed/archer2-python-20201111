@@ -2,9 +2,8 @@
 #  Cython wrapper for mpi4py to C
 #
 #  Requires, on the front end (see note below):
-#    module swap PrgEnv-cray PrgEnv-gnu
-#    module swap gcc gcc/4.9.3
-#    module load python-compute
+#    module restore PrgEnv-gnu
+#    module load cray-python
 #    make
 #
 # Typically, one might want, at the command line:
@@ -25,7 +24,6 @@
 # it suggests a mismatch. Use ldd to check exactly which version
 # is involved in mpi4py .so file and the wrapper.so file
 #
-# At the time of writing it's gnu/4.9.3 (see module stuff above).
 
 
 CC = cc

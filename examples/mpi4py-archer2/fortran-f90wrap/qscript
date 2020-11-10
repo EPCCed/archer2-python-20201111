@@ -1,18 +1,20 @@
 #!/bin/bash --login
 
-#PBS -N qscript
-#PBS -l select=1
-#PBS -l walltime=00:20:00
-#PBS -A
+#SBATCH --job-name qscript
+#SBATCH --nodes=1              # Request one node
+#SBATCH --tasks-per-node=128   # Request 128 tasks per node
+#SBATCH --cpus-per-task=1      # Request one cpu per task
+#SBATCH --time=00:20:00
 
-cd $PBS_O_WORKDIR
+#SBATCH --account=ta006
+#SBATCH --partition=standard
+#SBATCH --qos=standard
 
-module load python-compute
-module load pc-numpy
+
 
 # f90wrap runtime: assumes f90wrap is installed in the current
 # directory as described in the Makefile
 
 export PYTHONPATH=`pwd`/f90wrap/lib/python2.7/site-packages:$PYTHONPATH
 
-aprun -n 24 -N 24 python ./mpi-driver.py
+srun python ./mpi-driver.py
